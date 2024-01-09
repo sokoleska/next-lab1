@@ -1,6 +1,7 @@
 interface User {
-  email?: string
-  [key: string]: any
+  email?: string;
+  name?: string;
+  age?: number; 
 }
 
 export function extractEmails(users: User[]): string[] {

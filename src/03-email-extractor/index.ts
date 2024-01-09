@@ -1,25 +1,25 @@
 interface User {
-     email?: string;
-     [key: string]: any;
+  email?: string
+  [key: string]: any
 }
 
 export function extractEmails(users: User[]): string[] {
-     if (users.length == 0) {
-          return [];
-     }
+  if (users.length == 0) {
+    return []
+  }
 
-     let emails: string[] = [];
-     
-     users.forEach(user => {
-          if (user && typeof user.email === 'string') {
-               emails.push(user.email);
-          }
-     });
+  let emails: string[] = []
 
-     // get only the unique emails without duplicates 
-     const setOfuniqueEmails = new Set(emails);
+  users.forEach((user) => {
+    if (user && typeof user.email === 'string') {
+      emails.push(user.email)
+    }
+  })
 
-     const theEmails: string[] = Array.from(setOfuniqueEmails);
+  // get only the unique emails without duplicates
+  const setOfuniqueEmails = new Set(emails)
 
-     return theEmails;
+  const theEmails: string[] = Array.from(setOfuniqueEmails)
+
+  return theEmails
 }

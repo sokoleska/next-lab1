@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "src/main.ts",
   "scripts": {
-    "format": "prettier --write 'src/**/*.ts'",
+    "format": "prettier --write src/**/*.ts",
     "lint": "eslint src/**/*.ts",
     "test": "jest"
   },

@@ -8,7 +8,7 @@ export function extractEmails(users: User[]): string[] {
     return []
   }
 
-  let emails: string[] = []
+  const emails: string[] = []
 
   users.forEach((user) => {
     if (user && typeof user.email === 'string') {

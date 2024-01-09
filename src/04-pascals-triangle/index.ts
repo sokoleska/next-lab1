@@ -6,7 +6,7 @@ export function getPascalsTriangleRow(rowIndex: number): number[] {
   let lastRow = [1]
 
   for (let i = 1; i <= rowIndex; i++) {
-    let row = []
+    const row = []
 
     row[0] = 1
 
